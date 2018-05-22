@@ -31,12 +31,13 @@ body, html {
       position: absolute;
       left: 50%;
       top:  5%;
+      z-index: 3;
     }
   }
 }
 .menu {
   width: 100%;
-  .sidebar {
+  &-sidebar {
     width: 100%;
     z-index: 1;    
     background-color: #000;
@@ -63,10 +64,15 @@ body, html {
       }
     }
   }
+  img {
+    position: absolute;
+    left: 55%;
+    top: 20%;
+  }
   input[type=checkbox] {
     display: none; 
   }
-  input:checked ~ .sidebar {
+  input:checked ~ .menu-sidebar {
     opacity: 1;  
   }
   input:checked ~ label.toggle {
