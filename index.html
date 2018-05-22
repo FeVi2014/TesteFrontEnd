@@ -6,9 +6,11 @@
 </head>
 <body>
 <div class="menu">
-  <input id="slide-sidebar" type="checkbox" role="button" />
-  <label class="toggle" for="slide-sidebar">=</label>
-  <label class="back" for="slide-sidebar">< voltar</label>
+  <input id="slide-sidebar" type="checkbox" role="button"/>
+  <label class="toggle" for="slide-sidebar">&#9776;</label>
+  <label class="back" for="slide-sidebar">
+    <div class="arrow-left"></div>voltar
+  </label>
   <div class="menu-sidebar">
     <div class="menu-sidebar-list">
       <ul>
@@ -24,8 +26,19 @@
 </div>
 <div class="block">
   <div class="block-caption">
-    <span></span>
-    <img src="images/img1.jpg" alt="">
+    <span class="logo"></span>
+    <div class="carousel">
+        <div class="slides">
+          <img class="img" src="images/img1.jpg">
+          <img class="img" src="images/img1.jpg">
+          <img class="img" src="images/img1.jpg">
+        </div>
+        <div class="navigation">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
   </div>
 </div>
 <div class="block">
