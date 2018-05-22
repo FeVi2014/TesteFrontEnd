@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #000; }
+
+.block {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-color: #000;
+  min-height: 100%; }
+  .block-caption {
+    position: relative;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: #000; }
+    .block-caption span {
+      background-color: #fff;
+      padding: 30px 50px;
+      width: 30px;
+      position: absolute;
+      left: 50%;
+      top: 5%; }
+
+/*# sourceMappingURL=main.css.map */
