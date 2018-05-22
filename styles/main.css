@@ -1,6 +1,9 @@
 @font-face {
   font-family: Rheiborn_Sans_Clean;
   src: url(../fonts/Rheiborn_Sans_Clean.ttf); }
+@font-face {
+  font-family: Aleo;
+  src: url(../fonts/Aleo-Light.otf); }
 body, html {
   height: 100%;
   margin: 0;
@@ -10,6 +13,22 @@ body, html {
   font-size: 2.5rem;
   font-family: Rheiborn_Sans_Clean; }
 
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #24d6d6;
+  margin-right: 10px; }
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #24d6d6;
+  margin-left: 10px; }
+
 .block {
   position: relative;
   background-position: center;
@@ -17,13 +36,38 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%; }
-  .block-caption {
+  .block-content {
     position: relative;
     left: 0;
     top: 10%;
     width: 100%;
+    display: inline-flex;
     text-align: center; }
-    .block-caption .logo {
+    .block-content-text {
+      margin-top: 10%;
+      position: relative;
+      right: -23%;
+      font-size: 4rem;
+      width: 35%;
+      top: 10%;
+      text-align: left;
+      z-index: 1; }
+    .block-content-image {
+      margin-top: 10%;
+      position: relative;
+      left: 10%; }
+    .block-content-action {
+      position: absolute;
+      bottom: 12%;
+      left: 25%;
+      line-height: 15px;
+      display: inline-flex;
+      color: #24d6d6;
+      font-size: 0.5rem;
+      padding: 10px;
+      background-position: center right;
+      font-family: Aleo; }
+    .block-content .logo {
       background-color: #fff;
       padding: 30px 50px;
       width: 30px;
@@ -36,11 +80,11 @@ body, html {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1; }
+  z-index: 2; }
   .menu-sidebar {
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 98;
     background-color: #000;
     background-image: url(../images/smoke-background.png);
     background-repeat: no-repeat;
@@ -82,15 +126,8 @@ body, html {
     color: #24d6d6;
     font-size: 0.5rem;
     line-height: 16px; }
-  .menu .arrow-left {
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 8px solid #24d6d6;
-    margin-right: 10px; }
   .menu label {
-    z-index: 2;
+    z-index: 99;
     position: absolute;
     top: 0;
     right: 20%;
@@ -109,7 +146,9 @@ body, html {
       float: left; }
   .carousel .navigation {
     position: relative;
-    bottom: 10%; }
+    margin-top: -21px;
+    background: #000;
+    height: 200px; }
     .carousel .navigation .dot {
       display: inline-block;
       border-radius: 100%;
