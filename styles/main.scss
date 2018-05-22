@@ -1,10 +1,17 @@
+@font-face {
+  font-family: Rheiborn_Sans_Clean;
+  src: url(../fonts/Rheiborn_Sans_Clean.ttf);
+}
+$active-color: #24d6d6;
+
 body, html {
     height: 100%;
     margin: 0;
     background-color: #000;
     color: white;
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 2.75rem;
+    font-family: Rheiborn_Sans_Clean;
   }
 .block {
   position: relative;
@@ -30,25 +37,37 @@ body, html {
 .menu {
   width: 100%;
   .sidebar {
-    width: 50%;
+    width: 100%;
     z-index: 1;    
     background-color: #000;
+    background-image: url(../images/smoke-background.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right center;  
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    opacity: 1;
+    opacity: 0;
     -moz-transition: all 300ms ease;
     transition: visibility 0s, opacity 0.5s linear;
-    ul { 
-      list-style: none;
+    &-list {
+      left: 15%;
+      position: relative;
+      ul { 
+        list-style: none;
+        cursor: pointer;
+      }
+      li:hover {
+        color: $active-color;
+      }
     }
   }
   input[type=checkbox] {
     display: none; 
   }
   input:checked ~ .sidebar {
-    opacity: 0;  
+    opacity: 1;  
   }
   input:checked ~ label.toggle {
     display: none; 
@@ -56,8 +75,14 @@ body, html {
   input:checked ~ label.back {
     display: block; 
   }
+  .toggle {
+    display: block;
+    font-size: 1rem;
+  }
   .back {
     display: none;
+    color: $active-color;
+    font-size: 0.5rem;
   }
   label {
     z-index: 2;
