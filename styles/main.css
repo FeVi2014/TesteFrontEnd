@@ -4,6 +4,9 @@
 @font-face {
   font-family: Aleo;
   src: url(../fonts/Aleo-Regular.otf); }
+* {
+  box-sizing: border-box; }
+
 body, html {
   height: 100%;
   margin: 0;
@@ -58,54 +61,110 @@ body, html {
       left: 10%;
       width: 50%; }
       .block-content-image .img-larger {
-        width: 80%;
+        width: 70%;
         position: relative;
         bottom: -15%;
-        left: -9%;
-        height: 80%; }
+        left: -16%;
+        height: 100%; }
       .block-content-image .img-medium {
-        width: 50%;
+        width: 45%;
         top: 75%;
         left: 30%;
         position: absolute;
-        height: 45%;
+        height: 65%;
         z-index: 1; }
       .block-content-image .img-smaller {
         width: 40%;
         top: 45%;
-        left: 70%;
+        left: 61%;
         position: absolute;
-        height: 40%; }
+        height: 45%; }
+    .block-content .action-2 {
+      bottom: -12%; }
     .block-content-action {
       cursor: pointer;
+      display: inline-flex;
+      font-size: 0.35rem;
+      font-family: Aleo;
+      color: #24d6d6;
+      letter-spacing: 5px;
       position: absolute;
       bottom: 12%;
       left: 25%;
       line-height: 15px;
-      display: inline-flex;
-      color: #24d6d6;
-      font-size: 0.35rem;
       padding: 10px;
       background-position: center right;
-      font-family: Aleo;
-      letter-spacing: 5px;
       font-weight: 600; }
       .block-content-action .arrow-right, .block-content-action span {
         z-index: 1; }
       .block-content-action .text-background {
         background-color: black;
-        padding: 28px 48px;
+        padding: 28px 45px;
         position: absolute;
-        left: 62%;
+        left: 65%;
         top: -25%; }
     .block-content .logo {
       background-color: #fff;
       padding: 30px 50px;
-      width: 30px;
       position: fixed;
       left: 45%;
       top: 5%;
       z-index: 3; }
+    .block-content .footer {
+      margin-top: 10%;
+      width: 100%;
+      text-align: left;
+      height: 100%; }
+      .block-content .footer-toolbar {
+        background-image: url(../images/smoke-background.png);
+        background-repeat: no-repeat;
+        padding: 1% 0 4% 0;
+        width: 50%;
+        font-size: 1rem;
+        position: relative;
+        left: 25%;
+        margin-bottom: 10px; }
+        .block-content .footer-toolbar-title {
+          width: 30%;
+          margin: 3%; }
+        .block-content .footer-toolbar-columns {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          padding: 0 5% 8% 0;
+          margin-bottom: 50px; }
+          .block-content .footer-toolbar-columns .column {
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            font-size: 0.7rem;
+            float: left;
+            width: 33.33%;
+            padding: 0 4%; }
+            .block-content .footer-toolbar-columns .column-text {
+              font-size: 0.25rem;
+              font-family: Aleo;
+              color: #fff;
+              text-transform: lowercase;
+              letter-spacing: 1px;
+              font-weight: lighter; }
+              .block-content .footer-toolbar-columns .column-text span {
+                margin: 0 1px;
+                padding-top: 10px; }
+            .block-content .footer-toolbar-columns .column-action {
+              cursor: pointer;
+              display: inline-flex;
+              font-size: 0.25rem;
+              font-family: Aleo;
+              color: #24d6d6;
+              letter-spacing: 5px; }
+          .block-content .footer-toolbar-columns .row:after {
+            content: "";
+            display: table;
+            clear: both; }
+        .block-content .footer-toolbar .logo {
+          background-color: #fff;
+          padding: 30px 70px;
+          width: 30px;
+          position: relative;
+          bottom: 5%;
+          left: 0; }
 
 .menu {
   position: fixed;
