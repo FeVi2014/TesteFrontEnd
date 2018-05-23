@@ -25,18 +25,25 @@
     </div>
   </div>
   <div class="block">
-    <div class="block-content">
+    <div class="block-content inline">
       <span class="logo"></span>
-      <div class="carousel">
-        <div class="slides">
-          <img class="img" src="images/home-img1.jpg">
-          <img class="img" src="images/home-img1.jpg">
-          <img class="img" src="images/home-img1.jpg">
-        </div>
-        <div class="navigation">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+      <div class="container">
+        <div class="carousel">
+          <input type="radio" id="carousel-1" name="carousel[]" checked>
+          <input type="radio" id="carousel-2" name="carousel[]">
+          <input type="radio" id="carousel-3" name="carousel[]">
+          <input type="radio" id="carousel-4" name="carousel[]">
+          <input type="radio" id="carousel-5" name="carousel[]">
+          <ul class="carousel__items">
+            <li class="carousel__item"><img src="images/home-img1.jpg" alt=""></li>
+            <li class="carousel__item"><img src="images/home-img1.jpg" alt=""></li>
+            <li class="carousel__item"><img src="images/home-img1.jpg" alt=""></li>
+          </ul>
+          <div class="carousel__nav">
+            <label for="carousel-1"></label>
+            <label for="carousel-2"></label>
+            <label for="carousel-3"></label>
+          </div>
         </div>
       </div>
     </div>
