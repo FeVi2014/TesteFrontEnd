@@ -1,5 +1,18 @@
+@font-face {
+  font-family: Rheiborn_Sans_Clean;
+  src: url("../fonts/Rheiborn_Sans_Clean.ttf");
+}
+@font-face {
+  font-family: Aleo;
+  src: url("../fonts/Aleo-Regular.otf");
+}
+
 $active-color: #24d6d6;
 $smoke-background: url("../images/smoke-background.png");
+$break-extra-large: 1700px;
+$break-large: 1500px;
+$break-big: 1000px;
+
 
 * {
   box-sizing: border-box;
@@ -33,7 +46,9 @@ html {
   border-left: 8px solid $active-color;
   margin-left: 10px;
 }
-
+.no-background {
+  background-image: none !important;
+}
 .block {
   position: relative;
   background-position: center;
@@ -54,11 +69,12 @@ html {
       margin-top: 20%;
       position: relative;
       right: -23%;
-      font-size: 3rem;
-      width: 32%;
+      font-size: 2rem;
+      width: 30%;
       top: 10%;
       text-align: left;
       z-index: 1;
+
     }
 
     &-image {
@@ -66,6 +82,11 @@ html {
       position: relative;
       left: 10%;
       width: 50%;
+
+      .img-full {
+        width: 100%;
+        position: relative;
+      }
 
       .img-larger {
         width: 70%;
@@ -111,9 +132,11 @@ html {
       padding: 10px;
       background-position: center right;
       font-weight: 600;
+      @media only screen and (max-width: $break-big) {
+        bottom: 20%;
+      }
 
-      .arrow-right,
-      span {
+      .arrow-right, span {
         z-index: 1;
       }
 
@@ -158,13 +181,13 @@ html {
         background-position-y: center;
         font-weight: 600;
 
-        .text {
+        .text, .arrow-right {
           z-index: 1;
         }
 
         .text-background {
           background-color: black;
-          padding: 28px 45px;
+          padding: 28px 60px;
           position: absolute;
           left: 65%;
           top: -25%;
@@ -181,6 +204,10 @@ html {
         position: relative;
         left: 25%;
         margin-bottom: 10px;
+        @media screen and (max-width: $break-extra-large) {
+          width: 70%;
+          left: 15%;
+        }
 
         &-title {
           width: 30%;
@@ -459,11 +486,17 @@ html {
 
     &__nav {
       position: absolute;
-      bottom: 3%;
+      bottom: 40%;
       left: 0;
       text-align: center;
       width: 100%;
       z-index: 3;
+      @media screen and (min-width: $break-extra-large) {
+        bottom: 10%;
+      }
+      @media screen and (min-width: $break-large) {
+        bottom: 20%;
+      }
 
       > label {
         display: inline-block;
@@ -496,11 +529,3 @@ body {
   height: 100%;
 }
 @include carousel(5);
-@font-face {
-  font-family: Rheiborn_Sans_Clean;
-  src: url("../fonts/Rheiborn_Sans_Clean.ttf");
-}
-@font-face {
-  font-family: Aleo;
-  src: url("../fonts/Aleo-Regular.otf");
-}
