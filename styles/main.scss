@@ -130,6 +130,33 @@ body, html {
       width: 100%;
       text-align: left;
       height: 100%;
+      &-action {
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 0.35rem;
+        font-family: Aleo;
+        color: #24d6d6;
+        letter-spacing: 5px;
+        position: absolute;
+        bottom: 45%;
+        left: 70%;
+        line-height: 15px;
+        padding: 10px;
+        background-position: center right;
+        background-position-x: right;
+        background-position-y: center;
+        font-weight: 600;
+        .text {
+          z-index: 1;
+        }
+        .text-background {
+          background-color: black;
+          padding: 28px 45px;
+          position: absolute;
+          left: 65%;
+          top: -25%;
+        }
+      }
       &-toolbar {
         background-position: bottom;
         background-image: $smoke-background;
@@ -150,44 +177,91 @@ body, html {
           margin-bottom: 50px;
           .column {
             border-right: 1px solid rgba(255, 255, 255, 0.5);
-            font-size: 0.7rem;
-            float: left;
-            width: 33.33%;
-            padding: 0 4%;
-            &-text {
-              font-size: 0.25rem;
-              font-family: Aleo;
-              color: #fff;
-              text-transform: lowercase;
-              letter-spacing: 1px;
-              font-weight: lighter;
-              span {
-                margin: 0 1px;
-                padding-top: 10px;
-              }
-            }
-            &-action {
-              cursor: pointer;
-              display: inline-flex;
-              font-size: 0.25rem;
-              font-family: Aleo;
-              color: #24d6d6;
-              letter-spacing: 5px;
-            }
-          }
-          .row:after {
-            content: "";
-            display: table;
-            clear: both;
           }
         }
         .logo {
           background-color: #fff;
           padding: 30px 70px;
           width: 30px;
-          position: relative;
-          bottom: 5%;
           left: 0;
+          position: relative;
+        }
+      }
+      .column {
+        font-size: 0.7rem;
+        float: left;
+        width: 33.33%;
+        padding: 0 4%;
+        &-text {
+          font-size: 0.25rem;
+          font-family: Aleo;
+          color: #fff;
+          text-transform: none;
+          letter-spacing: 1px;
+          font-weight: lighter;
+          span {
+            margin: 0 1px;
+            padding-top: 10px;
+          }
+        }
+        &-action {
+          cursor: pointer;
+          display: inline-flex;
+          font-size: 0.25rem;
+          font-family: Aleo;
+          color: #24d6d6;
+          letter-spacing: 5px;
+        }
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .icons {
+        display: flex;
+        .icon {
+          width: 20%;
+          padding: 4px 10px;
+          margin: 8px 5%;
+          box-sizing: border-box;
+          border: 2px solid #fff;
+          text-transform: lowercase;
+          img {
+            width: 100%;
+          }
+        }
+        .icon-white {
+          background-color: #fff;
+        }
+        .icon-black {
+          color: $active-color;
+          background-color: transparent;
+        }
+      }
+      form {
+        display: flex;
+        color: #fff;
+      }
+      input[type=email] {
+        width: 75%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 2px solid #fff;
+        font-style: italic;
+      }
+      button {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 2px solid #fff;
+        .arrow-right {
+          border-left: 8px solid #fff;
+          margin-left: 5px;
         }
       }
     }

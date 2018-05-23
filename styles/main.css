@@ -115,7 +115,32 @@ body, html {
       width: 100%;
       text-align: left;
       height: 100%; }
+      .block-content .footer-action {
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 0.35rem;
+        font-family: Aleo;
+        color: #24d6d6;
+        letter-spacing: 5px;
+        position: absolute;
+        bottom: 45%;
+        left: 70%;
+        line-height: 15px;
+        padding: 10px;
+        background-position: center right;
+        background-position-x: right;
+        background-position-y: center;
+        font-weight: 600; }
+        .block-content .footer-action .text {
+          z-index: 1; }
+        .block-content .footer-action .text-background {
+          background-color: black;
+          padding: 28px 45px;
+          position: absolute;
+          left: 65%;
+          top: -25%; }
       .block-content .footer-toolbar {
+        background-position: bottom;
         background-image: url(../images/smoke-background.png);
         background-repeat: no-repeat;
         padding: 1% 0 4% 0;
@@ -132,39 +157,76 @@ body, html {
           padding: 0 5% 8% 0;
           margin-bottom: 50px; }
           .block-content .footer-toolbar-columns .column {
-            border-right: 1px solid rgba(255, 255, 255, 0.5);
-            font-size: 0.7rem;
-            float: left;
-            width: 33.33%;
-            padding: 0 4%; }
-            .block-content .footer-toolbar-columns .column-text {
-              font-size: 0.25rem;
-              font-family: Aleo;
-              color: #fff;
-              text-transform: lowercase;
-              letter-spacing: 1px;
-              font-weight: lighter; }
-              .block-content .footer-toolbar-columns .column-text span {
-                margin: 0 1px;
-                padding-top: 10px; }
-            .block-content .footer-toolbar-columns .column-action {
-              cursor: pointer;
-              display: inline-flex;
-              font-size: 0.25rem;
-              font-family: Aleo;
-              color: #24d6d6;
-              letter-spacing: 5px; }
-          .block-content .footer-toolbar-columns .row:after {
-            content: "";
-            display: table;
-            clear: both; }
+            border-right: 1px solid rgba(255, 255, 255, 0.5); }
         .block-content .footer-toolbar .logo {
           background-color: #fff;
           padding: 30px 70px;
           width: 30px;
-          position: relative;
-          bottom: 5%;
-          left: 0; }
+          left: 0;
+          position: relative; }
+      .block-content .footer .column {
+        font-size: 0.7rem;
+        float: left;
+        width: 33.33%;
+        padding: 0 4%; }
+        .block-content .footer .column-text {
+          font-size: 0.25rem;
+          font-family: Aleo;
+          color: #fff;
+          text-transform: none;
+          letter-spacing: 1px;
+          font-weight: lighter; }
+          .block-content .footer .column-text span {
+            margin: 0 1px;
+            padding-top: 10px; }
+        .block-content .footer .column-action {
+          cursor: pointer;
+          display: inline-flex;
+          font-size: 0.25rem;
+          font-family: Aleo;
+          color: #24d6d6;
+          letter-spacing: 5px; }
+      .block-content .footer .row:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .block-content .footer .icons {
+        display: flex; }
+        .block-content .footer .icons .icon {
+          width: 20%;
+          padding: 4px 10px;
+          margin: 8px 5%;
+          box-sizing: border-box;
+          border: 2px solid #fff;
+          text-transform: lowercase; }
+          .block-content .footer .icons .icon img {
+            width: 100%; }
+        .block-content .footer .icons .icon-white {
+          background-color: #fff; }
+        .block-content .footer .icons .icon-black {
+          color: #24d6d6;
+          background-color: transparent; }
+      .block-content .footer form {
+        display: flex;
+        color: #fff; }
+      .block-content .footer input[type=email] {
+        width: 75%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 2px solid #fff;
+        font-style: italic; }
+      .block-content .footer button {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 2px solid #fff; }
+        .block-content .footer button .arrow-right {
+          border-left: 8px solid #fff;
+          margin-left: 5px; }
 
 .menu {
   position: fixed;
