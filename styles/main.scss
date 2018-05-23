@@ -353,6 +353,8 @@ html {
       }
 
       img {
+        margin-top: 10%;
+        width: 100%;
         @media screen and (max-width: $break-small) {
           width: 130%;
           left: 5%;
@@ -468,6 +470,7 @@ html {
   input:checked ~ label.toggle {
     display: none;
   }
+
   input:checked ~ label.back {
     display: inline-flex;
   }

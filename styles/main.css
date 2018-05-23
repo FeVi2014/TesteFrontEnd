@@ -336,6 +336,10 @@ html {
   color: #24d6d6;
   background-color: transparent;
 }
+.block-content .footer img {
+  margin-top: 10%;
+  width: 100%;
+}
 @media screen and (max-width: 450px) {
   .block-content .footer img {
     width: 130%;
