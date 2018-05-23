@@ -53,7 +53,9 @@ html {
 .block {
   position: relative;
   background-position: center;
-  background-image: $smoke-background;
+  @media only screen and (min-width: $break-small) {
+    background-image: $smoke-background;
+  }
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
@@ -76,13 +78,34 @@ html {
       text-align: left;
       z-index: 1;
 
-    }
+      @media only screen and (max-width: $break-small) {
+        right: -6%;
+        font-size: 1.3rem;
+        width: 60%;
+      }
 
+
+    }
+    .image-solo{
+      @media only screen and (min-width: $break-small) {
+        display: none;
+      }
+    }
+    .image-blocks {
+      @media only screen and (max-width: $break-small) {
+        display: none;
+      }
+    }
     &-image {
       margin-top: 10%;
       position: relative;
       left: 10%;
       width: 50%;
+      @media only screen and (max-width: $break-small) {
+        position: absolute;
+        left: 59%;
+        width: 100%;
+      }
 
       .img-full {
         width: 100%;
@@ -117,6 +140,16 @@ html {
 
     .action-2 {
       bottom: -12%;
+      @media only screen and (max-width: $break-small) {
+        bottom: -30%;
+        text-align: left;
+        width: 45%;
+      }
+      .arrow-right {
+        @media only screen and (max-width: $break-small) {
+          margin-top: 15px;
+        }
+      }
     }
 
     &-action {
@@ -136,6 +169,10 @@ html {
       @media only screen and (max-width: $break-big) {
         bottom: 20%;
       }
+      @media only screen and (max-width: $break-small) {
+        bottom: -40%;
+        left: 2%;
+      }
 
       .arrow-right, span {
         z-index: 1;
@@ -147,6 +184,9 @@ html {
         position: absolute;
         left: 65%;
         top: -25%;
+        @media only screen and (max-width: $break-small) {
+          display: none;
+        }
       }
     }
 
@@ -185,6 +225,12 @@ html {
         background-position-x: right;
         background-position-y: center;
         font-weight: 600;
+        @media screen and (max-width: $break-small) {
+          bottom: 0;
+          width: 100%;
+          top: 20%;
+          left: 10%;
+        }
 
         .text, .arrow-right {
           z-index: 1;
@@ -196,6 +242,12 @@ html {
           position: absolute;
           left: 65%;
           top: -25%;
+          @media screen and (max-width: $break-small) {
+            padding: 20px 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
         }
       }
 
@@ -300,6 +352,14 @@ html {
         }
       }
 
+      img {
+        @media screen and (max-width: $break-small) {
+          width: 130%;
+          left: 5%;
+          position: relative;
+        }
+      }
+
       form {
         display: flex;
         color: #fff;
@@ -337,7 +397,9 @@ html {
   width: 100%;
   height: 100%;
   z-index: 4;
-
+  @media screen and (max-width: $break-small) {
+    width: 360px;
+  }
   &-sidebar {
     height: 100%;
     width: 100%;
@@ -357,12 +419,21 @@ html {
     @media screen and (min-width: $break-big) {
       font-size: 2rem;
     }
+    @media screen and (max-width: $break-small) {
+      background-size: cover;
+      background-position: top;
+    }
 
     &-list {
       top: 10%;
       left: 15%;
       position: relative;
-
+      @media screen and (max-width: $break-small) {
+        font-size: 1.3rem;
+        text-align: center;
+        top: 4%;
+        left: -5%;
+      }
       ul {
         list-style: none;
         cursor: pointer;
@@ -373,14 +444,6 @@ html {
       }
     }
   }
-
-  .helper {
-    background: #fff;
-    position: absolute;
-    display: inline-block;
-    z-index: 99;
-  }
-
   img {
     position: absolute;
     left: 55%;
@@ -388,6 +451,9 @@ html {
     @media screen and (min-width: $break-big) {
       top: 25%;
       width: 40%;
+    }
+    @media screen and (max-width: $break-small) {
+      display: none;
     }
   }
 
@@ -409,6 +475,9 @@ html {
   .toggle {
     display: block;
     font-size: 1rem;
+    @media screen and (max-width: $break-small) {
+      left: 80%;
+    }
   }
 
   .back {
@@ -416,6 +485,10 @@ html {
     color: $active-color;
     font-size: 0.5rem;
     line-height: 16px;
+    @media screen and (max-width: $break-small) {
+      left: 70%;
+      font-size: 0.7rem;
+    }
   }
 
   label {
@@ -424,8 +497,7 @@ html {
     top: 0;
     top: 5%;
     @media screen and (max-width: $break-small) {
-       left: 21%;
-       top: 1%;
+      top: 1%;
     }
     @media screen and (min-width: $break-small) {
       right: 20%;

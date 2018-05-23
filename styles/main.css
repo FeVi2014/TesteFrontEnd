@@ -46,10 +46,14 @@ html {
 .block {
   position: relative;
   background-position: center;
-  background-image: url("../images/smoke-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
+}
+@media only screen and (min-width: 450px) {
+  .block {
+    background-image: url("../images/smoke-background.png");
+  }
 }
 .block-content {
   position: relative;
@@ -69,11 +73,35 @@ html {
   text-align: left;
   z-index: 1;
 }
+@media only screen and (max-width: 450px) {
+  .block-content-text {
+    right: -6%;
+    font-size: 1.3rem;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 450px) {
+  .block-content .image-solo {
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .block-content .image-blocks {
+    display: none;
+  }
+}
 .block-content-image {
   margin-top: 10%;
   position: relative;
   left: 10%;
   width: 50%;
+}
+@media only screen and (max-width: 450px) {
+  .block-content-image {
+    position: absolute;
+    left: 59%;
+    width: 100%;
+  }
 }
 .block-content-image .img-full {
   width: 100%;
@@ -104,6 +132,18 @@ html {
 .block-content .action-2 {
   bottom: -12%;
 }
+@media only screen and (max-width: 450px) {
+  .block-content .action-2 {
+    bottom: -30%;
+    text-align: left;
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .block-content .action-2 .arrow-right {
+    margin-top: 15px;
+  }
+}
 .block-content-action {
   cursor: pointer;
   display: inline-flex;
@@ -124,6 +164,12 @@ html {
     bottom: 20%;
   }
 }
+@media only screen and (max-width: 450px) {
+  .block-content-action {
+    bottom: -40%;
+    left: 2%;
+  }
+}
 .block-content-action .arrow-right, .block-content-action span {
   z-index: 1;
 }
@@ -133,6 +179,11 @@ html {
   position: absolute;
   left: 65%;
   top: -25%;
+}
+@media only screen and (max-width: 450px) {
+  .block-content-action .text-background {
+    display: none;
+  }
 }
 .block-content .logo {
   background-color: #fff;
@@ -171,6 +222,14 @@ html {
   background-position-y: center;
   font-weight: 600;
 }
+@media screen and (max-width: 450px) {
+  .block-content .footer-action {
+    bottom: 0;
+    width: 100%;
+    top: 20%;
+    left: 10%;
+  }
+}
 .block-content .footer-action .text, .block-content .footer-action .arrow-right {
   z-index: 1;
 }
@@ -180,6 +239,14 @@ html {
   position: absolute;
   left: 65%;
   top: -25%;
+}
+@media screen and (max-width: 450px) {
+  .block-content .footer-action .text-background {
+    padding: 20px 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 .block-content .footer-toolbar {
   background-position: bottom;
@@ -269,6 +336,13 @@ html {
   color: #24d6d6;
   background-color: transparent;
 }
+@media screen and (max-width: 450px) {
+  .block-content .footer img {
+    width: 130%;
+    left: 5%;
+    position: relative;
+  }
+}
 .block-content .footer form {
   display: flex;
   color: #fff;
@@ -301,6 +375,11 @@ html {
   height: 100%;
   z-index: 4;
 }
+@media screen and (max-width: 450px) {
+  .menu {
+    width: 360px;
+  }
+}
 .menu-sidebar {
   height: 100%;
   width: 100%;
@@ -323,10 +402,24 @@ html {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 450px) {
+  .menu-sidebar {
+    background-size: cover;
+    background-position: top;
+  }
+}
 .menu-sidebar-list {
   top: 10%;
   left: 15%;
   position: relative;
+}
+@media screen and (max-width: 450px) {
+  .menu-sidebar-list {
+    font-size: 1.3rem;
+    text-align: center;
+    top: 4%;
+    left: -5%;
+  }
 }
 .menu-sidebar-list ul {
   list-style: none;
@@ -334,12 +427,6 @@ html {
 }
 .menu-sidebar-list li:hover {
   color: #24d6d6;
-}
-.menu .helper {
-  background: #fff;
-  position: absolute;
-  display: inline-block;
-  z-index: 99;
 }
 .menu img {
   position: absolute;
@@ -350,6 +437,11 @@ html {
   .menu img {
     top: 25%;
     width: 40%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .menu img {
+    display: none;
   }
 }
 .menu input[type=checkbox] {
@@ -368,11 +460,22 @@ html {
   display: block;
   font-size: 1rem;
 }
+@media screen and (max-width: 450px) {
+  .menu .toggle {
+    left: 80%;
+  }
+}
 .menu .back {
   display: none;
   color: #24d6d6;
   font-size: 0.5rem;
   line-height: 16px;
+}
+@media screen and (max-width: 450px) {
+  .menu .back {
+    left: 70%;
+    font-size: 0.7rem;
+  }
 }
 .menu label {
   z-index: 99;
@@ -382,7 +485,6 @@ html {
 }
 @media screen and (max-width: 450px) {
   .menu label {
-    left: 21%;
     top: 1%;
   }
 }
