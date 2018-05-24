@@ -6,14 +6,12 @@
   font-family: Aleo;
   src: url("../fonts/Aleo-Regular.otf");
 }
-
 $active-color: #24d6d6;
 $smoke-background: url("../images/smoke-background.png");
 $break-extra-large: 1700px;
 $break-large: 1500px;
 $break-big: 1000px;
 $break-small: 450px;
-
 
 * {
   box-sizing: border-box;
@@ -47,9 +45,15 @@ html {
   border-left: 8px solid $active-color;
   margin-left: 10px;
 }
+
+.text-center {
+  text-align: center;
+}
+
 .no-background {
   background-image: none !important;
 }
+
 .block {
   position: relative;
   background-position: center;
@@ -67,6 +71,9 @@ html {
     width: 100%;
     display: inline-flex;
     text-align: center;
+    @media only screen and (max-width: $break-small) {
+      margin-top: 50%;
+    }
 
     &-text {
       margin-top: 20%;
@@ -77,25 +84,25 @@ html {
       top: 10%;
       text-align: left;
       z-index: 1;
-
       @media only screen and (max-width: $break-small) {
         right: -6%;
         font-size: 1.3rem;
         width: 60%;
       }
-
-
     }
-    .image-solo{
+
+    .image-solo {
       @media only screen and (min-width: $break-small) {
         display: none;
       }
     }
+
     .image-blocks {
       @media only screen and (max-width: $break-small) {
         display: none;
       }
     }
+
     &-image {
       margin-top: 10%;
       position: relative;
@@ -103,8 +110,7 @@ html {
       width: 50%;
       @media only screen and (max-width: $break-small) {
         position: absolute;
-        left: 59%;
-        width: 100%;
+        left: 60%;
       }
 
       .img-full {
@@ -145,6 +151,7 @@ html {
         text-align: left;
         width: 45%;
       }
+
       .arrow-right {
         @media only screen and (max-width: $break-small) {
           margin-top: 15px;
@@ -174,7 +181,8 @@ html {
         left: 2%;
       }
 
-      .arrow-right, span {
+      .arrow-right,
+      span {
         z-index: 1;
       }
 
@@ -196,9 +204,9 @@ html {
       position: fixed;
       left: 45%;
       top: 5%;
-      z-index: 3;
+      z-index: 4;
       @media screen and (max-width: $break-small) {
-        left: 9%;
+        left: 36%;
         top: 1%;
       }
     }
@@ -228,11 +236,13 @@ html {
         @media screen and (max-width: $break-small) {
           bottom: 0;
           width: 100%;
-          top: 20%;
-          left: 10%;
+          top: 17%;
+          left: 14%;
+          padding: 15px 10px;
         }
 
-        .text, .arrow-right {
+        .arrow-right,
+        .text {
           z-index: 1;
         }
 
@@ -251,9 +261,20 @@ html {
         }
       }
 
+      &-img-desktop {
+        @media screen and (max-width: $break-small) {
+          display: none;
+        }
+      }
+
+      &-img-mobile {
+        @media screen and (min-width: $break-small) {
+          display: none;
+        }
+      }
+
       &-toolbar {
         background-position: bottom;
-        background-image: $smoke-background;
         background-repeat: no-repeat;
         padding: 1% 0 4%;
         width: 50%;
@@ -261,23 +282,36 @@ html {
         position: relative;
         left: 25%;
         margin-bottom: 10px;
+        @media screen and (min-width: $break-small) {
+          background-image: $smoke-background;
+        }
         @media screen and (max-width: $break-extra-large) {
           width: 70%;
           left: 15%;
         }
 
         &-title {
-          width: 30%;
           margin: 3%;
+          @media screen and (min-width: $break-small) {
+            margin: 59px 0;
+            width: 30%;
+          }
         }
 
         &-columns {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
           padding: 0 5% 8% 0;
           margin-bottom: 50px;
+          @media screen and (min-width: $break-small) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          }
 
           .column {
-            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            @media screen and (min-width: $break-small) {
+              border-right: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            @media screen and (max-width: $break-small) {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            }
           }
         }
 
@@ -287,6 +321,10 @@ html {
           width: 30px;
           left: 0;
           position: relative;
+          z-index: 3;
+          @media screen and (max-width: $break-small) {
+            left: 20%;
+          }
         }
       }
 
@@ -295,6 +333,11 @@ html {
         float: left;
         width: 33.33%;
         padding: 0 4%;
+        @media screen and (max-width: $break-small) {
+          width: 100%;
+          margin-top: 30px;
+          padding: 15px 0;
+        }
 
         &-text {
           font-size: 0.25rem;
@@ -328,7 +371,10 @@ html {
 
       .icons {
         display: flex;
-
+        @media screen and (max-width: $break-small) {
+          left: 17%;
+          position: relative;
+        }
         .icon {
           width: 20%;
           padding: 4px 10px;
@@ -356,8 +402,8 @@ html {
         margin-top: 10%;
         width: 100%;
         @media screen and (max-width: $break-small) {
-          width: 130%;
-          left: 5%;
+          left: 10%;
+          width: 100%;
           position: relative;
         }
       }
@@ -399,9 +445,7 @@ html {
   width: 100%;
   height: 100%;
   z-index: 4;
-  @media screen and (max-width: $break-small) {
-    width: 360px;
-  }
+
   &-sidebar {
     height: 100%;
     width: 100%;
@@ -433,9 +477,10 @@ html {
       @media screen and (max-width: $break-small) {
         font-size: 1.3rem;
         text-align: center;
-        top: 4%;
-        left: -5%;
+        top: 15%;
+        left: -7%;
       }
+
       ul {
         list-style: none;
         cursor: pointer;
@@ -446,6 +491,7 @@ html {
       }
     }
   }
+
   img {
     position: absolute;
     left: 55%;
@@ -491,6 +537,7 @@ html {
     @media screen and (max-width: $break-small) {
       left: 70%;
       font-size: 0.7rem;
+      top: 5%;
     }
   }
 
@@ -630,13 +677,14 @@ body {
     display: none;
   }
 }
+
 .full-image {
-  background-image: url(../images/home-img1.jpg);
+  background-image: url("../images/mobile-home-img1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: none;
-  padding: 100%;
+  padding: 90% 55%;
   @media only screen and (max-width: $break-small) {
     display: block;
   }
