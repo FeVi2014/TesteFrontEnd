@@ -39,6 +39,14 @@ html {
 .no-background {
   background-image: none !important; }
 
+@media screen and (max-width: 450px) {
+  .img-desktop {
+    display: none; } }
+
+@media screen and (min-width: 450px) {
+  .img-mobile {
+    display: none; } }
+
 .block {
   position: relative;
   background-position: center;
@@ -86,7 +94,7 @@ html {
       @media only screen and (max-width: 450px) {
         .block-content-image {
           position: absolute;
-          left: 60%; } }
+          left: 65%; } }
       .block-content-image .img-full {
         width: 100%;
         position: relative; }
@@ -156,7 +164,7 @@ html {
       background-color: #fff;
       padding: 30px 50px;
       position: fixed;
-      left: 45%;
+      left: 47.5%;
       top: 5%;
       z-index: 4; }
       @media screen and (max-width: 450px) {
@@ -187,10 +195,9 @@ html {
         @media screen and (max-width: 450px) {
           .block-content .footer-action {
             bottom: 0;
-            width: 100%;
             top: 17%;
-            left: 14%;
-            padding: 15px 10px; } }
+            left: 70px;
+            padding: 10px 3px; } }
         .block-content .footer-action .arrow-right,
         .block-content .footer-action .text {
           z-index: 1; }
@@ -206,12 +213,6 @@ html {
               position: absolute;
               left: 0;
               top: 0; } }
-      @media screen and (max-width: 450px) {
-        .block-content .footer-img-desktop {
-          display: none; } }
-      @media screen and (min-width: 450px) {
-        .block-content .footer-img-mobile {
-          display: none; } }
       .block-content .footer-toolbar {
         background-position: bottom;
         background-repeat: no-repeat;
@@ -312,7 +313,7 @@ html {
         width: 100%; }
         @media screen and (max-width: 450px) {
           .block-content .footer img {
-            left: 10%;
+            left: 14%;
             width: 100%;
             position: relative; } }
       .block-content .footer form {
@@ -404,7 +405,7 @@ html {
     font-size: 1rem; }
     @media screen and (max-width: 450px) {
       .menu .toggle {
-        left: 80%; } }
+        left: 75%; } }
   .menu .back {
     display: none;
     color: #24d6d6;
@@ -412,9 +413,9 @@ html {
     line-height: 16px; }
     @media screen and (max-width: 450px) {
       .menu .back {
-        left: 70%;
-        font-size: 0.7rem;
-        top: 5%; } }
+        top: 5%;
+        left: 65%;
+        font-size: 0.55rem; } }
   .menu label {
     z-index: 99;
     position: absolute;
@@ -454,7 +455,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   display: none;
-  padding: 90% 55%; }
+  padding: 90% 57%; }
   @media only screen and (max-width: 450px) {
     .full-image {
       display: block; } }
@@ -505,7 +506,7 @@ body {
     padding: 0;
     list-style-type: none;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
     position: relative; }
   .carousel__item {
     position: absolute;

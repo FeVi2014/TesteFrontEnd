@@ -54,6 +54,18 @@ html {
   background-image: none !important;
 }
 
+.img-desktop {
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+}
+
+.img-mobile {
+  @media screen and (min-width: $break-small) {
+    display: none;
+  }
+}
+
 .block {
   position: relative;
   background-position: center;
@@ -110,7 +122,7 @@ html {
       width: 50%;
       @media only screen and (max-width: $break-small) {
         position: absolute;
-        left: 60%;
+        left: 65%;
       }
 
       .img-full {
@@ -202,7 +214,7 @@ html {
       background-color: #fff;
       padding: 30px 50px;
       position: fixed;
-      left: 45%;
+      left: 47.5%;
       top: 5%;
       z-index: 4;
       @media screen and (max-width: $break-small) {
@@ -235,10 +247,9 @@ html {
         font-weight: 600;
         @media screen and (max-width: $break-small) {
           bottom: 0;
-          width: 100%;
           top: 17%;
-          left: 14%;
-          padding: 15px 10px;
+          left: 70px;
+          padding: 10px 3px;
         }
 
         .arrow-right,
@@ -258,18 +269,6 @@ html {
             left: 0;
             top: 0;
           }
-        }
-      }
-
-      &-img-desktop {
-        @media screen and (max-width: $break-small) {
-          display: none;
-        }
-      }
-
-      &-img-mobile {
-        @media screen and (min-width: $break-small) {
-          display: none;
         }
       }
 
@@ -375,6 +374,7 @@ html {
           left: 17%;
           position: relative;
         }
+
         .icon {
           width: 20%;
           padding: 4px 10px;
@@ -402,7 +402,7 @@ html {
         margin-top: 10%;
         width: 100%;
         @media screen and (max-width: $break-small) {
-          left: 10%;
+          left: 14%;
           width: 100%;
           position: relative;
         }
@@ -525,7 +525,7 @@ html {
     display: block;
     font-size: 1rem;
     @media screen and (max-width: $break-small) {
-      left: 80%;
+      left: 75%;
     }
   }
 
@@ -535,9 +535,9 @@ html {
     font-size: 0.5rem;
     line-height: 16px;
     @media screen and (max-width: $break-small) {
-      left: 70%;
-      font-size: 0.7rem;
       top: 5%;
+      left: 65%;
+      font-size: 0.55rem;
     }
   }
 
@@ -610,7 +610,7 @@ html {
       padding: 0;
       list-style-type: none;
       width: 100%;
-      height: 1000px;
+      height: 100vh;
       position: relative;
     }
 
@@ -684,7 +684,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   display: none;
-  padding: 90% 55%;
+  padding: 90% 57%;
   @media only screen and (max-width: $break-small) {
     display: block;
   }
